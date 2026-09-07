@@ -1,16 +1,4 @@
-/*
-* Project: OASIS
-* Module : SECDED decoder module
-* Revisions:
-*            2015.12.16: First version.
-*            2016.01.16: RAB, BLoD, SER, ECC, LAFT are completed
-*/
-
-`ifndef VCS
- `include "defines.v"
-`endif
-
-module SECDED_dec(
+module SECDED_1622_dec(
   clk,
   rst_n,
   data_in,
@@ -31,7 +19,7 @@ localparam PARITY_BIT = CODE_BIT-DATA_BIT;
 output uncorrected;
 
 wire [CODE_BIT-1:0] sb [PARITY_BIT-1:0];
-// NOTE: is this synthesizable???
+
 assign  sb[0] = {22'b000001_0100_0100_0011_1111};
 assign  sb[1] = {22'b000010_0001_0011_1100_0111};
 assign  sb[2] = {22'b000100_1110_0001_1101_0001};

@@ -1,12 +1,4 @@
-/*
-* Project: OASIS
-* Module : SECDED encoder module
-* Revisions:
-*            2015.12.16: First version.
-*            2016.01.16: RAB, BLoD, SER, ECC, LAFT are completed
-*/
-
-module SECDED_enc(
+module SECDED_1622_enc(
   clk,
   rst_n,
   data_in,
@@ -24,7 +16,6 @@ output [CODE_BIT-1:0] data_out;
 localparam PARITY_BIT = CODE_BIT-DATA_BIT;
 
 wire [DATA_BIT-1:0] sb [PARITY_BIT-1:0];
-// NOTE: is this synthesizable???
 assign  sb[0] = {16'b0100_0100_0011_1111};
 assign  sb[1] = {16'b0001_0011_1100_0111};
 assign  sb[2] = {16'b1110_0001_1101_0001};
