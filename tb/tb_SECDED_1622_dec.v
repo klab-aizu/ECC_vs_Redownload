@@ -14,6 +14,8 @@ module tb_SECDED_1622_dec;
     reg clk;
     reg rst_n;
 
+    reg [CODE_BIT-1:0] error_mask;
+
     reg  [DATA_BIT-1:0] data;
     wire [CODE_BIT-1:0] encoded_data;
     wire [CODE_BIT-1:0] decoded_data;
@@ -39,7 +41,7 @@ module tb_SECDED_1622_dec;
         .DATA_BIT(DATA_BIT),
         .CODE_BIT(CODE_BIT)
     ) decoder (
-        .data_in    (encoded_data),
+        .data_in    (encoded_data ^ error_mask),
         .uncorrected(uncorrected),
         .data_out   (decoded_data)
     );
@@ -61,6 +63,7 @@ module tb_SECDED_1622_dec;
         // Initial condition
         rst_n = 1'b0;
         data  = '0;
+        error_mask = '0;
 
         // Reset
         #(2 * CLOCK_PERIOD);
@@ -83,5 +86,16 @@ module tb_SECDED_1622_dec;
 
         $finish;
     end
+
+
+always @(posedge clk) begin
+    if (rst_n) begin
+        if (decoded_data !== encoded_data) begin
+            $display("ERROR: Decoder mismatch!");
+            $display("Encoded : %b", encoded_data);
+            $display("Decoded : %b", decoded_data);
+        end
+    end
+end
 
 endmodule
