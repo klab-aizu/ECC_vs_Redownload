@@ -9,7 +9,7 @@ vlog ../tb/tb_SECDED_1622_dec.v
 
 # simulate
 
-vsim -t 1ps -voptargs="+acc" -sdfmax /decoder=./verilog_files/SECDED_1622_dec_net.sdf -sdfnoerror -L work +no_neg_tcheck tb_SECDED_1622_dec
+vsim -t 1ps -voptargs="+acc" -sdfmax /decoder=../syn/output_files//SECDED_1622_dec_net.sdf -sdfnoerror -L work +no_neg_tcheck tb_SECDED_1622_dec
 
 power add /tb_SECDED_1622_dec/decoder/*
 
