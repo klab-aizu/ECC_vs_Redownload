@@ -4,8 +4,8 @@ vmap work work
 # compile
 vlog /home/lib/cells.v
 vlog ../syn/output_files/SECDED_1622_dec_net.v
-vlog ../rtl/SECDED_1622_enc.v
-vlog ../tb/tb_SECDED_1622_dec
+vlog ../rtl/SECDED_1622_enc.v 
+vlog ../tb/tb_SECDED_1622_dec.v
 
 # simulate
 
