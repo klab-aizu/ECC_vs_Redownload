@@ -9,7 +9,7 @@ module tb_SECDED_1622_dec;
     // Simulation parameters
     // ============================================================
     parameter CLOCK_PERIOD = 10;       // ns, 100 MHz
-    parameter NUM_CYCLES   = 100;   // number of codewords
+    parameter NUM_CYCLES   = 100000;   // number of codewords
 
     reg clk;
     reg rst_n;
