@@ -46,11 +46,9 @@ assign error = (|cb[PARITY_BIT-1:0]);
 assign one_error = error & (^cb[PARITY_BIT-1:0]);
 assign two_error =  error & !(^cb[PARITY_BIT-1:0]);
 
-  assign uncorrected = two_error;
-  assign data_out = (one_error)? (data_in^eb):
-                    (two_error)? data_in:data_in;
-end
-endgenerate
+assign uncorrected = two_error;
+assign data_out = (one_error)? (data_in^eb):
+                  (two_error)? data_in:data_in;
 
 // check bit
 generate
