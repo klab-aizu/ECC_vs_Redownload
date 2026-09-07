@@ -64,7 +64,7 @@ module tb_SECDED_1622_dec;
     // Error Mask
     // ============================================================
     always @(*) begin
-        error_mask = CODE_BIT'b0;
+        error_mask = 'b0;
 
         //num_errors = $urandom_range(0, 2);
 
