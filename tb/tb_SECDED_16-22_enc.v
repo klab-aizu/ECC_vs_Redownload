@@ -26,8 +26,6 @@ module tb_SECDED_1622_enc;
         .DATA_BIT(DATA_BIT),
         .CODE_BIT(CODE_BIT)
     ) dut (
-        .clk      (clk),
-        .rst_n    (rst_n),
         .data_in  (data_in),
         .data_out (data_out)
     );

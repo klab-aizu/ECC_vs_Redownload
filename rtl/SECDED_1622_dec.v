@@ -1,6 +1,4 @@
 module SECDED_1622_dec(
-  clk,
-  rst_n,
   data_in,
   uncorrected,
   data_out
@@ -9,7 +7,6 @@ module SECDED_1622_dec(
 parameter DATA_BIT = 16;
 parameter CODE_BIT = 22;
 
-input clk, rst_n;
 
 input  [CODE_BIT-1:0] data_in;
 output [CODE_BIT-1:0] data_out;

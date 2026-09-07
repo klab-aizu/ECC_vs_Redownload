@@ -28,8 +28,6 @@ module tb_SECDED_1622_dec;
         .DATA_BIT(DATA_BIT),
         .CODE_BIT(CODE_BIT)
     ) encoder (
-        .clk      (clk),
-        .rst_n    (rst_n),
         .data_in  (data),
         .data_out (encoded_data)
     );
@@ -41,8 +39,6 @@ module tb_SECDED_1622_dec;
         .DATA_BIT(DATA_BIT),
         .CODE_BIT(CODE_BIT)
     ) decoder (
-        .clk        (clk),
-        .rst_n      (rst_n),
         .data_in    (encoded_data),
         .uncorrected(uncorrected),
         .data_out   (decoded_data)
