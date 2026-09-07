@@ -132,7 +132,8 @@ always @(posedge clk) begin
     if (rst_n) begin
         if ((decoded_data !== encoded_data) && uncorrected == 1'b0) begin
             $display("ERROR: Silent errors (%d)!", i);
-            $display("Encoded : %b", encoded_data);
+            $display("num_errors: (%d)!", num_errors);
+            $display("error_mask: %b", error_mask);
             $display("Decoded : %b", decoded_data);
             $display("Uncorrected : %b", uncorrected);
         end
