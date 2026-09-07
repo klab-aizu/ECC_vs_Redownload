@@ -29,10 +29,12 @@ module tb_SECDED_1622_dec;
     // ============================================================
     // Encoder
     // ============================================================
-    SECDED_1622_enc #(
-        .DATA_BIT(DATA_BIT),
-        .CODE_BIT(CODE_BIT)
-    ) encoder (
+    SECDED_1622_enc 
+    //#(
+    //    .DATA_BIT(DATA_BIT),
+    //    .CODE_BIT(CODE_BIT)
+    //) 
+    encoder (
         .data_in  (data),
         .data_out (encoded_data)
     );
@@ -40,10 +42,12 @@ module tb_SECDED_1622_dec;
     // ============================================================
     // Decoder
     // ============================================================
-    SECDED_1622_dec #(
-        .DATA_BIT(DATA_BIT),
-        .CODE_BIT(CODE_BIT)
-    ) decoder (
+    SECDED_1622_dec 
+    //#(
+    //    .DATA_BIT(DATA_BIT),
+    //    .CODE_BIT(CODE_BIT)
+    //) 
+    decoder (
         .data_in    (encoded_data ^ error_mask),
         .uncorrected(uncorrected),
         .data_out   (decoded_data)
