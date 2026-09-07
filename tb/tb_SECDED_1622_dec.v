@@ -134,6 +134,7 @@ always @(posedge clk) begin
             $display("ERROR: Silent errors (%d)!", i);
             $display("num_errors: (%d)!", num_errors);
             $display("error_mask: %b", error_mask);
+            $display("Encoded : %b", encoded_data);
             $display("Decoded : %b", decoded_data);
             $display("Uncorrected : %b", uncorrected);
         end
