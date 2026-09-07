@@ -1,6 +1,4 @@
 module SECDED_1622_enc(
-  clk,
-  rst_n,
   data_in,
   data_out
 );
@@ -8,7 +6,6 @@ module SECDED_1622_enc(
 parameter DATA_BIT = 16;
 parameter CODE_BIT = 22;
 
-input clk, rst_n;
 
 input  [DATA_BIT-1:0] data_in;
 output [CODE_BIT-1:0] data_out;
