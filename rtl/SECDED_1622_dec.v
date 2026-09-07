@@ -46,15 +46,9 @@ assign error = (|cb[PARITY_BIT-1:0]);
 assign one_error = error & (^cb[PARITY_BIT-1:0]);
 assign two_error =  error & !(^cb[PARITY_BIT-1:0]);
 
-generate if (`DISABLE_CORRECT == 1) begin: DIS_CORR
-  assign uncorrected = one_error|two_error;
-  assign data_out = ((one_error | two_error) && `DIAG_DROPFLIT)? {CODE_BIT{1'b0}}:
-                    ((one_error | two_error) && (!`DIAG_DROPFLIT))? data_in:data_in;
-end else begin : EN_CORR
   assign uncorrected = two_error;
   assign data_out = (one_error)? (data_in^eb):
-                    (two_error && `DIAG_DROPFLIT)? {CODE_BIT{1'b0}}:
-                    (two_error && (!`DIAG_DROPFLIT))? data_in:data_in;
+                    (two_error)? data_in:data_in;
 end
 endgenerate
 
