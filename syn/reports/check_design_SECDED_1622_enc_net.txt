@@ -1,0 +1,30 @@
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06-SP5-2
+Date:        Mon Sep  7 23:36:14 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     16
+    Feedthrough (LINT-29)                                          16
+--------------------------------------------------------------------------------
+
+Warning: In design 'SECDED_1622_enc', input port 'data_in[15]' is connected directly to output port 'data_out[15]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[14]' is connected directly to output port 'data_out[14]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[13]' is connected directly to output port 'data_out[13]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[12]' is connected directly to output port 'data_out[12]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[11]' is connected directly to output port 'data_out[11]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[10]' is connected directly to output port 'data_out[10]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[9]' is connected directly to output port 'data_out[9]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[8]' is connected directly to output port 'data_out[8]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[7]' is connected directly to output port 'data_out[7]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[6]' is connected directly to output port 'data_out[6]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[5]' is connected directly to output port 'data_out[5]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[4]' is connected directly to output port 'data_out[4]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[3]' is connected directly to output port 'data_out[3]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[2]' is connected directly to output port 'data_out[2]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[1]' is connected directly to output port 'data_out[1]'. (LINT-29)
+Warning: In design 'SECDED_1622_enc', input port 'data_in[0]' is connected directly to output port 'data_out[0]'. (LINT-29)
+1

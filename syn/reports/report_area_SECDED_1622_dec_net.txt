@@ -1,0 +1,43 @@
+ 
+****************************************
+Report : area
+Design : SECDED_1622_dec
+Version: X-2025.06-SP5-2
+Date   : Mon Sep  7 23:34:11 2026
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/lib/typical.db)
+
+Number of ports:                           45
+Number of nets:                           147
+Number of cells:                          125
+Number of combinational cells:            125
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          9
+Number of references:                      11
+
+Combinational area:                160.663997
+Buf/Inv area:                        4.788000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                   160.663997
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+SECDED_1622_dec                    160.6640    100.0  160.6640     0.0000  0.0000  SECDED_1622_dec
+--------------------------------  ---------  -------  --------  ---------  ------  ---------
+Total                                                 160.6640     0.0000  0.0000
+
+1

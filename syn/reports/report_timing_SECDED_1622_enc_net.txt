@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SECDED_1622_enc
+Version: X-2025.06-SP5-2
+Date   : Mon Sep  7 23:36:14 2026
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: data_in[14]
+              (input port)
+  Endpoint: data_out[18]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SECDED_1622_enc    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  data_in[14] (in)                         0.00       0.00 f
+  U66/Z (XOR2_X1)                          0.07       0.07 f
+  U65/Z (XOR2_X1)                          0.08       0.15 f
+  U63/Z (XOR2_X1)                          0.07       0.23 f
+  U62/Z (XOR2_X1)                          0.07       0.30 f
+  data_out[18] (out)                       0.00       0.30 f
+  data arrival time                                   0.30
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

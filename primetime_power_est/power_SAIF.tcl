@@ -45,7 +45,7 @@ read_parasitics ../syn/output_files/$spef_file
 read_saif ../post_syn_power_sim/$saif_file -strip_path "tb_SECDED_1622_dec/decoder/"
 
 
-report_timing > ./report/timing_report_${base_name}.txt
-report_power -verbose -hier > ./report/power_report_${base_name}.txt
+report_timing > ./reports/timing_report_${base_name}.txt
+report_power -verbose -hier > ./reports/power_report_${base_name}.txt
 redirect –tee –append ./EW.log {print_message_info}
 quit

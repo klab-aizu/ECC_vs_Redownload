@@ -1,0 +1,64 @@
+Loading db file '/home/lib/typical.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+        -verbose
+Design : SECDED_1622_dec
+Version: X-2025.06-SP5-2
+Date   : Mon Sep  7 23:34:12 2026
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/lib/typical.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+SECDED_1622_dec        5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  86.0071 uW   (49%)
+  Net Switching Power  =  89.3627 uW   (51%)
+                         ---------
+Total Dynamic Power    = 175.3698 uW  (100%)
+
+Cell Leakage Power     =   3.3988 uW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+                                                                                             i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+combinational     86.0071           89.3627        3.3988e+03          178.7686  ( 100.00%)            125
+---------------------------------------------------------------------------------------------------------
+Total             86.0071 uW        89.3627 uW     3.3988e+03 nW       178.7686 uW
+1
