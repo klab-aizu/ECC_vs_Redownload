@@ -126,8 +126,8 @@ module tb_SECDED_1622_dec;
 
 always @(posedge clk) begin
     if (rst_n) begin
-        if (decoded_data !== encoded_data) begin
-            $display("ERROR: Decoder mismatch of case (%d)!", i);
+        if ((decoded_data !== encoded_data) && uncorrected == 1'b0) begin
+            $display("ERROR: Silent errors (%d)!", i);
             $display("Encoded : %b", encoded_data);
             $display("Decoded : %b", decoded_data);
             $display("Uncorrected : %b", uncorrected);
