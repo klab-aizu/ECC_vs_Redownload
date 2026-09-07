@@ -8,7 +8,7 @@ vlog ../tb/tb_SECDED_1622_dec.v
 
 # simulate
 
-vsim -voptargs="+acc" work.tb_SECDED_1622_dec
+vsim -t 1ps  -voptargs="+acc" work.tb_SECDED_1622_dec
 
 # add wave to the view
 add wave /*
