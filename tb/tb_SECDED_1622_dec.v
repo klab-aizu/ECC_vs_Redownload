@@ -75,6 +75,7 @@ module tb_SECDED_1622_dec;
 
         else if (num_errors == 2) begin
             pos1 = $urandom_range(0, CODE_BIT-1);
+            pos2 = $urandom_range(0, CODE_BIT-1);
 
             while (pos2 == pos1) begin
                 pos2 = $urandom_range(0, CODE_BIT-1);
