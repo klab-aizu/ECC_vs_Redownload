@@ -8,7 +8,7 @@ module tb_SECDED_1622_dec;
     // ============================================================
     // Simulation parameters
     // ============================================================
-    parameter CLOCK_PERIOD = 20000;       // ns, 50 MHz
+    parameter CLOCK_PERIOD = 20000;       // ps (remove timescale, number now depends on simulator), 50 MHz
     parameter NUM_CYCLES   = 100000;   // number of codewords
 
     reg clk;
@@ -67,7 +67,7 @@ module tb_SECDED_1622_dec;
     // ============================================================
     // Error Mask
     // ============================================================
-    always @(*) begin
+    always @(negedge clk) begin
         error_mask = 'b0;
         pos1 = 0;
         pos2 = 0;
