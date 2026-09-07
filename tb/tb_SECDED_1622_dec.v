@@ -8,7 +8,7 @@ module tb_SECDED_1622_dec;
     // ============================================================
     // Simulation parameters
     // ============================================================
-    parameter CLOCK_PERIOD = 10;       // ns, 100 MHz
+    parameter CLOCK_PERIOD = 20;       // ns, 50 MHz
     parameter NUM_CYCLES   = 100000;   // number of codewords
 
     reg clk;
@@ -69,7 +69,8 @@ module tb_SECDED_1622_dec;
     // ============================================================
     always @(*) begin
         error_mask = 'b0;
-
+        pos1 = 0;
+        pos2 = 0;
         //num_errors = $urandom_range(0, 2);
 
         if (num_errors == 1) begin
